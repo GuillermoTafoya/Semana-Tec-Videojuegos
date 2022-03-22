@@ -36,9 +36,23 @@ def square(start, end):
     end_fill()
 
 
+<<<<<<< Updated upstream
 def c(start, end):
     """Draw circle from start to end."""
     circle(end.x - start.x)
+=======
+def circle2(start, end):
+    """Draw circle taking the end position as the diameter."""
+    if start.y > end.y:
+        start,end = end,start
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    circle( ((end.y-start.y)**2+(end.x - start.x)**2)**(1/2) / 2)
+    end_fill()
+
+>>>>>>> Stashed changes
 
 
 def rectangle(start, end):
