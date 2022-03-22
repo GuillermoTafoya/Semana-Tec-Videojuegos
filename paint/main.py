@@ -1,7 +1,5 @@
 """Paint, for drawing shapes.
-
 Exercises
-
 1. Add a color.
 2. Complete circle.
 3. Complete rectangle.
@@ -9,6 +7,7 @@ Exercises
 5. Add width parameter.
 """
 
+from random import triangular
 from turtle import *
 
 from freegames import vector
@@ -39,17 +38,38 @@ def square(start, end):
 def c(start, end):
     """Draw circle from start to end."""
     circle(end.x - start.x)
+    begin_fill()
 
 
 def rectangle(start, end):
-    """Draw rectangle from start to end."""
-    pass  # TODO
+    """Draw square from start to end."""
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(2):
+        forward((end.x - start.x )*2)
+        left(90)
+        forward(end.x - start.x)
+        left(90)
+
+
+
+    end_fill()
 
 
 def triangle(start, end):
-    """Draw triangle from start to end."""
-    pass  # TODO
+    
+    
 
+    up()
+    goto(start.x, start.y)
+    begin_fill()
+    down()
+    circle(end.x,steps=3)
+    
+    
 
 def tap(x, y):
     """Store starting point or draw shape."""
