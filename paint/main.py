@@ -36,9 +36,9 @@ def square(start, end):
     end_fill()
 
 
-def circle(start, end):
+def c(start, end):
     """Draw circle from start to end."""
-    pass  # TODO
+    circle(end.x - start.x)
 
 
 def rectangle(start, end):
@@ -81,7 +81,7 @@ onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
-onkey(lambda: store('shape', circle), 'c')
+onkey(lambda: store('shape', c), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
