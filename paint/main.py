@@ -35,7 +35,6 @@ def square(start, end):
 
     end_fill()
 
-from math import cos
 def circle2(start, end):
     """Draw circle taking the end position as the diameter."""
     if start.y > end.y:
