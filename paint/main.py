@@ -35,7 +35,6 @@ def square(start, end):
 
     end_fill()
 
-from math import cos
 def circle2(start, end):
     """Draw circle taking the end position as the diameter."""
     if start.y > end.y:
@@ -55,16 +54,13 @@ def circle2(start, end):
     circle(radius) # distance between start and end
     end_fill()
 
-
 def rectangle(start, end):
     """Draw rectangle from start to end."""
     pass  # TODO
 
-
 def triangle(start, end):
     """Draw triangle from start to end."""
     pass  # TODO
-
 
 def tap(x, y):
     """Store starting point or draw shape."""
@@ -78,11 +74,9 @@ def tap(x, y):
         shape(start, end)
         state['start'] = None
 
-
 def store(key, value):
     """Store value in state at key."""
     state[key] = value
-
 
 state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
@@ -99,6 +93,7 @@ onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
 onkey(lambda: color('yellow'), 'Y')
 onkey(lambda: color('purple'), 'P')
+
 # Shapes
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
