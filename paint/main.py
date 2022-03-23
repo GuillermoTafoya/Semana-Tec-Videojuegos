@@ -35,24 +35,25 @@ def square(start, end):
 
     end_fill()
 
-
-<<<<<<< Updated upstream
-def c(start, end):
-    """Draw circle from start to end."""
-    circle(end.x - start.x)
-=======
+from math import cos
 def circle2(start, end):
     """Draw circle taking the end position as the diameter."""
     if start.y > end.y:
-        start,end = end,start
+        start.y,end.y = end.y,start.y
+    if start.x > end.x:
+        start.x,end.x = end.x,start.x
+    
+    x2 = end.x
+    x1 = start.x
+    y2 = end.y
+    y1 = start.y
     up()
-    goto(start.x, start.y)
+    radius = ((y2-y1)**2+(x2 - x1)**2)**(1/2) / 2
+    goto((x2+x1)/2, (y2+y1)/2 - radius)
     down()
     begin_fill()
-    circle( ((end.y-start.y)**2+(end.x - start.x)**2)**(1/2) / 2)
+    circle(radius) # distance between start and end
     end_fill()
-
->>>>>>> Stashed changes
 
 
 def rectangle(start, end):
@@ -95,7 +96,7 @@ onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
-onkey(lambda: store('shape', c), 'c')
+onkey(lambda: store('shape', circle2), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
