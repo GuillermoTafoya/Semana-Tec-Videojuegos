@@ -82,9 +82,14 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+<<<<<<< Updated upstream
 onkey(lambda: color('yellow'), 'Y')
 onkey(lambda: color('purple'), 'P')
 # Shapes
+=======
+onkey(lambda: color('purple'), 'P')
+onkey(lambda: color('yellow'), 'Y')
+>>>>>>> Stashed changes
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', c), 'c')
