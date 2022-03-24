@@ -16,6 +16,7 @@ from freegames import square, vector
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
+framerate = 0
 
 writer = Turtle()
 def info_alumnos():
@@ -39,11 +40,35 @@ def inside(head):
     """Return True if head inside boundaries."""
     return -200 < head.x < 190 and -200 < head.y < 190
 
+from random import choice
+directions = [vector(0, 10), vector(10, 0), vector(0, -10), vector(-10, 0)]
+def moveFoodOneStepAtRandom():
+    """Move food one step at random."""
+    global food
+    tries = 0
+    # While the direction is not valid, keep choosing a new direction.
+    f = food.copy()
+    direction = choice(directions)
+    f.move(direction)
+    while not inside(f) or f in snake:
+        direction = choice(directions)
+        f.move(direction)
+        if tries == 4:
+            break
+        tries += 1
+
+    food = f
 
 def move():
     """Move snake forward one segment."""
+    global framerate
     head = snake[-1].copy()
     head.move(aim)
+    if framerate == 3:
+        moveFoodOneStepAtRandom()
+        framerate = 0
+    else:
+        framerate += 1
 
     if not inside(head) or head in snake:
         square(head.x, head.y, 9, 'red')
