@@ -2,7 +2,7 @@
 
 ## Preview
 
-![Circles](./assets/CIRCLES%20N%20COLORS.png)
+![Circles](./assets/2022-03-23 20-27-35.gif)
 
 ## Instructions
 ```python
