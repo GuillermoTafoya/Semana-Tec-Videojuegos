@@ -56,13 +56,26 @@ def circle2(start, end):
 
 
 def rectangle(start, end):
-    """Draw rectangle from start to end."""
-    pass  # TODO
+    """Draw square from start to end."""
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
 
+    for count in range(2):
+        forward((end.x - start.x)*2)
+        left(90)
+        forward(end.x - start.x)
+        left(90)
+    end_fill()
 
 def triangle(start, end):
     """Draw triangle from start to end."""
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    begin_fill()
+    down()
+    circle(end.x, steps=3)
 
 
 def tap(x, y):
@@ -87,12 +100,21 @@ state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
+### THE COMMANDS ARE CASE SENSITIVE ###
+
+# Undo
 onkey(undo, 'u')
+
+# Change Color
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: color('yellow'), 'Y')
+onkey(lambda: color('purple'), 'P')
+
+# Change Shape
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle2), 'c')
