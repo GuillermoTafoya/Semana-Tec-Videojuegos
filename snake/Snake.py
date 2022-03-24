@@ -64,6 +64,7 @@ def move():
     global framerate
     head = snake[-1].copy()
     head.move(aim)
+    # Make the food move slower than the snake.
     if framerate == 3:
         moveFoodOneStepAtRandom()
         framerate = 0
