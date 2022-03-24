@@ -6,8 +6,8 @@
 
 
 ## Alumnos
-Guillermo A01633790
-Roger A01620778
+Guillermo A01633790.
+Roger A01620778.
 
 ## Instructions
 ```python
