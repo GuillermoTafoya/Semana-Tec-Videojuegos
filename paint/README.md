@@ -60,7 +60,7 @@ Al presionar las letras mayúsculas `Y` ó `P`, se selecciona el color correspon
 onkey(lambda: color('yellow'), 'Y')
 onkey(lambda: color('purple'), 'P')
 ```
-## Funciones Roger
+## Funciones Roger A01620778
 
 ### Dibujar Rectángulo
 Toma una posición inicial y final, dibuja un rectángulo con un lado dos veces mayor al otro.
