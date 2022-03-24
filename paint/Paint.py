@@ -1,5 +1,7 @@
 """Paint, for drawing shapes.
+
 Exercises
+
 1. Add a color.
 2. Complete circle.
 3. Complete rectangle.
@@ -33,14 +35,13 @@ def square(start, end):
 
     end_fill()
 
-
 def circle2(start, end):
     """Draw circle taking the end position as the diameter."""
     if start.y > end.y:
-        start.y, end.y = end.y, start.y
+        start.y,end.y = end.y,start.y
     if start.x > end.x:
-        start.x, end.x = end.x, start.x
-
+        start.x,end.x = end.x,start.x
+    
     x2 = end.x
     x1 = start.x
     y2 = end.y
@@ -50,7 +51,7 @@ def circle2(start, end):
     goto((x2+x1)/2, (y2+y1)/2 - radius)
     down()
     begin_fill()
-    circle(radius)  # distance between start and end
+    circle(radius) # distance between start and end
     end_fill()
 
 
@@ -68,10 +69,13 @@ def rectangle(start, end):
         left(90)
     end_fill()
 
-
 def triangle(start, end):
     """Draw triangle from start to end."""
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    begin_fill()
+    down()
+    circle(end.x, steps=3)
 
 
 def tap(x, y):
@@ -96,12 +100,21 @@ state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
+### THE COMMANDS ARE CASE SENSITIVE ###
+
+# Undo
 onkey(undo, 'u')
+
+# Change Color
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: color('yellow'), 'Y')
+onkey(lambda: color('purple'), 'P')
+
+# Change Shape
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle2), 'c')
