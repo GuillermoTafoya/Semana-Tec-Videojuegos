@@ -1,3 +1,4 @@
+
 """Paint, for drawing shapes.
 
 Exercises
@@ -132,3 +133,4 @@ onkey(lambda: store('shape', circle2), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
+

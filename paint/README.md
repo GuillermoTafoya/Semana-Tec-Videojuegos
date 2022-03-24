@@ -62,13 +62,34 @@ onkey(lambda: color('purple'), 'P')
 ```
 ## Funciones Roger
 
-### Función 1
+### Dibujar Rectángulo
+Toma una posición inicial y final, dibuja un rectángulo con un lado dos veces mayor al otro.
+
 ```python
-print("Hello World!")
+def rectangle(start, end):
+    """Draw square from start to end."""
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(2):
+        forward((end.x - start.x)*2)
+        left(90)
+        forward(end.x - start.x)
+        left(90)
+    end_fill()
 ```
-### Función 2
+### Dibujar Triángulo
+Toma la función de círculo y lo dibuja con solo tres lados. Es decir, dibuja un triángulo.
 ```python
-print("Hello World!")
+def triangle(start, end):
+    """Draw triangle from start to end."""
+    up()
+    goto(start.x, start.y)
+    begin_fill()
+    down()
+    circle(end.x, steps=3)
 ```
 
 
