@@ -2,7 +2,7 @@
 
 ## Preview
 
-![Circles](./assets/2022-03-23 20-27-35.gif)
+![Circles](./assets/ghip.gif)
 
 ## Instructions
 ```python
