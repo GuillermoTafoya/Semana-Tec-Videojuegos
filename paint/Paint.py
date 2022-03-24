@@ -13,6 +13,16 @@ from turtle import *
 
 from freegames import vector
 
+writer = Turtle()
+def info_alumnos():
+    writer.up()
+    writer.goto(-60,190)
+    writer.color('red')
+    writer.write('Guillermo Tafoya Milo A01633790', align='left', font=('Arial', 10, 'normal'))
+    writer.goto(-60,170)
+    writer.color('blue')
+    writer.write('Rogelio Zaid Sariñana Hernández A01620778', align='left', font=('Arial', 10, 'normal'))
+    writer.goto(-60,250)
 
 def line(start, end):
     """Draw line from start to end."""
@@ -99,6 +109,7 @@ def store(key, value):
 state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
+info_alumnos()
 listen()
 ### THE COMMANDS ARE CASE SENSITIVE ###
 
