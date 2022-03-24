@@ -4,6 +4,11 @@
 
 ![Circles](./assets/ghip.gif)
 
+
+## Alumnos
+Guillermo A01633790
+Roger A01620778
+
 ## Instructions
 ```python
 ### THE COMMANDS ARE CASE SENSITIVE ###
