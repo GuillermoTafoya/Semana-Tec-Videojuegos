@@ -1,4 +1,3 @@
-
 """Paint, for drawing shapes.
 
 Exercises
@@ -110,8 +109,8 @@ def store(key, value):
 state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
-info_alumnos()
 listen()
+info_alumnos()
 ### THE COMMANDS ARE CASE SENSITIVE ###
 
 # Undo
@@ -133,4 +132,3 @@ onkey(lambda: store('shape', circle2), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
-
