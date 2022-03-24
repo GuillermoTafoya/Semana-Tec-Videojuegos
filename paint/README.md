@@ -2,7 +2,7 @@
 
 ## Preview
 
-![Circles](./assets/CIRCLES%20N%20COLORS.png)
+![Circles](./assets/ghip.gif)
 
 ## Instructions
 ```python
