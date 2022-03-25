@@ -27,8 +27,7 @@ onkey(lambda: change(0, -10), 'Down')
 
 ###  Mover la comida cada 3 pasos 
 
-Esta función toma la posición inicial y final como el diametro. Procede a dibujar un circulo rellenado. <br>
-Para obtener la circunferencia solamente, presiona `u` cuando el círculo este terminado.
+Esta función hace que por cada tres recuadros que avanza la serpiente, la comida se mueve un paso en un una dirección aleatoria.
 ```python
 from random import choice
 directions = [vector(0, 10), vector(10, 0), vector(0, -10), vector(-10, 0)]
