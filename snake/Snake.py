@@ -14,7 +14,7 @@ from freegames import square, vector
 
 food = vector(0, 0)
 snake = [vector(10, 0)]
-colors= ["black","red","green","blue","purple","yellow""blue"]
+colors= ["black","green","blue","purple","yellow""blue"]
 inex = randrange(0, len(colors)-1)
 ine2 = randrange(0, len(colors)-1)
 colorchoice  = colors[inex]
