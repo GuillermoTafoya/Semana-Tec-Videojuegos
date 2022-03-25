@@ -2,7 +2,7 @@
 
 ## Preview
 
-![snake](/Assets/ghig.gif)
+![Circles](./Assets/ghig.gif)
 
 
 ## Alumnos
