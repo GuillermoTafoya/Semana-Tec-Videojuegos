@@ -16,6 +16,8 @@ Roger A01620778.
 
 ### [Video Roger A01620778](https://drive.google.com/drive/folders/17uMP97icxEqS7MdK-MxyZQVeZpztEKxj?usp=sharing)
 
+## Pulls 
+![Pulls](./Assets/pulls.png)
 ## Funciones Guillermo
 
 ###  Datos de los alumnos
