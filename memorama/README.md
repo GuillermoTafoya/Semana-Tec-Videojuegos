@@ -10,6 +10,12 @@ Guillermo A01633790.
 
 Roger A01620778.
 
+## Videos
+
+### [Video Guillermo](https://drive.google.com/file/d/1LYNdZmbqvFPYZfb6wuk0IYSFRNrJgPFm/view?usp=sharing)
+
+### Roger
+
 ## Instructions
 ```python
 ### THE COMMANDS ARE CASE SENSITIVE ###
