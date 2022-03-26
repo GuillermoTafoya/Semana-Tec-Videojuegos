@@ -1,7 +1,5 @@
 """Memory, puzzle game of number pairs.
-
 Exercises:
-
 1. Count and print how many taps occur.
 2. Decrease the number of tiles to a 4x4 grid.
 3. Detect when all tiles are revealed.
@@ -34,10 +32,6 @@ def info_alumnos():
     writer.goto(x,y-20)
     writer.color('blue')
     writer.write('Rogelio Zaid Sariñana Hernández A01620778', align='left', font=('Arial', 10, 'normal'))
-
-
-
-
 
 def square(x, y):
     """Draw white square with black outline at (x, y)."""
@@ -92,6 +86,7 @@ def draw():
     goto(0, 0)
     shape(car)
     stamp()
+    win()
     
     for count in range(64):
         if hide[count]:
@@ -109,6 +104,14 @@ def draw():
 
     update()
     ontimer(draw, 100)
+
+def win():
+    """Display winning message."""
+    if sum(hide) == 0:
+        clear()
+        writer.clear()
+        writer2.clear()
+        write('Ganaste un auto!!, Felicidades', align='center', font=('Arial', 20, 'normal'))
 
 
 shuffle(tiles)
