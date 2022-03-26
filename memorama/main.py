@@ -10,6 +10,7 @@ Exercises:
 """
 
 from random import *
+from tkinter import X
 from turtle import *
 
 from freegames import path
@@ -19,6 +20,19 @@ tiles = list(range(32)) * 2
 state = {'mark': None}
 hide = [True] * 64
 
+writer = Turtle()
+#Display Autors
+def info_alumnos():
+    x = -200
+    y = 230
+    writer.up()
+    writer.goto(x,y)
+    writer.color('red')
+    writer.write('Guillermo Tafoya Milo A01633790', align='left', font=('Arial', 10, 'normal'))
+    writer.goto(x,y-20)
+    writer.color('blue')
+    writer.write('Rogelio Zaid Sariñana Hernández A01620778', align='left', font=('Arial', 10, 'normal'))
+    writer.goto(x,y+50)
 
 def square(x, y):
     """Draw white square with black outline at (x, y)."""
@@ -82,7 +96,8 @@ def draw():
 
 
 shuffle(tiles)
-setup(420, 420, 370, 0)
+setup(500, 500, 370, 0)
+info_alumnos()
 addshape(car)
 hideturtle()
 tracer(False)
