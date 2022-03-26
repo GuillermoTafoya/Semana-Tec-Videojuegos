@@ -14,7 +14,7 @@ from turtle import *
 from freegames import path
 
 car = path('car.gif')
-tiles = list(range(32)) * 2
+tiles = ["Aguascalientes"," Baja California", "Baja California Sur", "Campeche"," Coahuila", "Colima"," Chiapas", "Chihuahua"," Durango", "Distrito Federal"," Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "México", "Michoacán", "Morelos", "Nayarit", "Nuevo León"," Oaxaca", "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz"," Yucatán","Zacatecas"]*2
 state = {'mark': None}
 hide = [True] * 64
 taps = 0
@@ -100,7 +100,7 @@ def draw():
         up()
         goto(x + 2, y)
         color('black')
-        write(tiles[mark], font=('Arial', 30, 'normal'))
+        write(tiles[mark], font=('Arial', 10, 'normal'))
 
     update()
     ontimer(draw, 100)
