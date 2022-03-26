@@ -17,11 +17,13 @@ car = path('car.gif')
 tiles = list(range(32)) * 2
 state = {'mark': None}
 hide = [True] * 64
-
+taps = 0
 writer = Turtle()
+writer.hideturtle()
 #Display Autors
 def info_alumnos():
-    x = -200
+    
+    x = -240
     y = 230
     writer.up()
     writer.goto(x,y)
@@ -30,7 +32,6 @@ def info_alumnos():
     writer.goto(x,y-20)
     writer.color('blue')
     writer.write('Rogelio Zaid Sariñana Hernández A01620778', align='left', font=('Arial', 10, 'normal'))
-    writer.goto(x,y+50)
 
 def square(x, y):
     """Draw white square with black outline at (x, y)."""
@@ -55,10 +56,13 @@ def xy(count):
     return (count % 8) * 50 - 200, (count // 8) * 50 - 200
 
 
+
 def tap(x, y):
     """Update mark and hidden tiles based on tap."""
     spot = index(x, y)
     mark = state['mark']
+    global taps
+    taps += 1
 
     if mark is None or mark == spot or tiles[mark] != tiles[spot]:
         state['mark'] = spot
@@ -67,25 +71,30 @@ def tap(x, y):
         hide[mark] = False
         state['mark'] = None
 
-
+writer2 = Turtle()
+writer2.hideturtle()
 def draw():
-    """Draw image and tiles."""
+    """Draw image, number of taps and tiles."""
+    writer2.clear()
+    writer2.up()
+    writer2.goto(40, 220)
+    writer2.color('green')
+    writer2.write('Taps: ' + str(taps), align='left', font=('Arial', 10, 'normal'))
+
+
     clear()
     goto(0, 0)
     shape(car)
     stamp()
-<<<<<<< Updated upstream
-
-=======
     win()
->>>>>>> Stashed changes
+    
     for count in range(64):
         if hide[count]:
             x, y = xy(count)
             square(x, y)
 
     mark = state['mark']
-
+    
     if mark is not None and hide[mark]:
         x, y = xy(mark)
         up()
