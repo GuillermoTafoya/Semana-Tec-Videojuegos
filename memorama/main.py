@@ -1,7 +1,5 @@
 """Memory, puzzle game of number pairs.
-
 Exercises:
-
 1. Count and print how many taps occur.
 2. Decrease the number of tiles to a 4x4 grid.
 3. Detect when all tiles are revealed.
@@ -76,7 +74,11 @@ def draw():
     goto(0, 0)
     shape(car)
     stamp()
+<<<<<<< Updated upstream
 
+=======
+    win()
+>>>>>>> Stashed changes
     for count in range(64):
         if hide[count]:
             x, y = xy(count)
@@ -93,6 +95,14 @@ def draw():
 
     update()
     ontimer(draw, 100)
+
+def win():
+    """Display winning message."""
+    if sum(hide) == 0:
+        clear()
+        writer.clear()
+        writer2.clear()
+        write('Ganaste un auto!!, Felicidades', align='center', font=('Arial', 20, 'normal'))
 
 
 shuffle(tiles)
